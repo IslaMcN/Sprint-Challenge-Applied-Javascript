@@ -34,11 +34,15 @@ The Document Object Model(DOM) is a cross-platform and language-independent inte
 
 2. What is an event?
 
+Events are "things" that happen to HTML elements. They are triggered by something that the client does. Examples: click, arrow-down, scroll, etc.
+
 3. What is an event listener?
 
 4. Why would we convert a NodeList into an Array?
 
 5. What is a component?
+
+Resusable code that keeps your code DRY.
 
 ### Git Set up
 
