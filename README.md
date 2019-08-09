@@ -38,6 +38,8 @@ Events are "things" that happen to HTML elements. They are triggered by somethin
 
 3. What is an event listener?
 
+The addEventListener() method attaches an event to an action that the client triggers. It is "listening" or "waiting" for the client to trigger an event.
+
 4. Why would we convert a NodeList into an Array?
 
 Because if you need to go over each item it's easier to do that with .forEach, .map etc. You can't do that with a NodeList because it is techinally an object.

@@ -12,7 +12,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
   .then((response) => {
     console.log(response);
     topics.map(
-        topic.appendChild(newTabs(response.data))
+        topic.appendChild(newTabs(response.topics))
     )
     })
 const topic = document.createElement('div');
@@ -23,7 +23,7 @@ function newTabs(things) {
 
     tabs.classList.add('tabs');
 
-    tabs.textContent = response.data.topics
+    tabs.textContent = response.topics
     
    return newTabs
 }
