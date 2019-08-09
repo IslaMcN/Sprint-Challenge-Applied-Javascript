@@ -9,23 +9,28 @@
 //    <div class="tab">topic here</div>
 
 
-const topic = document.createElement('div');
-topic.classList.add('topics')
+// 
+// topic.classList.add('topics')
+const tabs = document.querySelector('.topics');
 
-function newTabs(things) {
-    const tabs = document.querySelector('.topics');
-    things.forEach((topics) => {
-        const tab = document.createElement('div');
-        tab.classList.add('tab');
-        tab.textContent = topics;
-    tabs.classList.add('tabs');
-    topics.appendChild(tab)
-},
-    )   
+function newTabs(topic) {
+    const tab = document.createElement('div');
+    tab.classList.add('tab');
+    tab.textContent = topic
 }
+      
+
 
 const topics = axios.get('https://lambda-times-backend.herokuapp.com/topics')
   .then((response) => {
     console.log(response);
-    topics.map(newTabs(response.data.topics))
+    topics.map(banana => {
+        tabs.appendChild(newTabs(banana))
+    }
+        )
     });
+
+
+    // data.map(data => {
+    //     article.appendChild(createComponent(data))
+    //   })
