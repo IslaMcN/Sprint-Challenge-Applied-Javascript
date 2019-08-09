@@ -19,7 +19,25 @@
 // Create a card for each of the articles and add the card to the DOM.
 
 const cards = document.querySelector('.cards-container')
-
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+    .then((response) => {
+        
+        const ards = document.querySelector('.tab');
+        ards.addEventListener('click', ()=>{
+            justwork(response.data.articles.bootstrap)
+            justwork(response.data.articles.Javascript)
+            justwork(response.data.articles.technology)
+            justwork(response.data.articles.jquery)
+            justwork(response.data.articles.node)
+        })
+        
+    })
+function justwork (work) {
+    const cooperate = work;
+    cooperate.forEach(element => {
+        cards.appendChild(articleCard(element))
+    });
+}
 function articleCard(article) {
 
     let newCard = document.createElement('div');
@@ -27,7 +45,7 @@ function articleCard(article) {
 
     let newHeadline = document.createElement('div');
     newHeadline.classList.add('headline');
-    // newHeadline.textContent = `${article.articles}`
+    newHeadline.textContent = `${article.headline}`
 
     let authorContainer = document.createElement('div');
     authorContainer.classList.add('author');
@@ -36,10 +54,10 @@ function articleCard(article) {
     imgContainer.classList.add('img-container');
 
     let img = document.createElement('img');
-    // img.src = ''
+    img.src = article.authorPhoto;
 
     let author = document.createElement('span');
-    author.textContent = `By: ${article.bootstrap.authorName}`
+    author.textContent = `${article.authorName}`;
 
 
 
@@ -58,11 +76,6 @@ function articleCard(article) {
 }
 
 
-axios.get('https://lambda-times-backend.herokuapp.com/articles')
-    .then((response) => {
-        console.log(response)
-        cards.appendChild(articleCard(response.article))
-    })
 
 
 
