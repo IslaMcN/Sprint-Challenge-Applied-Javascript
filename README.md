@@ -30,6 +30,8 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The Document Object Model(DOM) is a cross-platform and language-independent interface. Meaning it can "understand" multiple languages. We can see the DOM in our browser when we use Dev Tools.
+
 2. What is an event?
 
 3. What is an event listener?
