@@ -40,6 +40,8 @@ Events are "things" that happen to HTML elements. They are triggered by somethin
 
 4. Why would we convert a NodeList into an Array?
 
+Because if you need to go over each item it's easier to do that with .forEach, .map etc. You can't do that with a NodeList because it is techinally an object.
+
 5. What is a component?
 
 Resusable code that keeps your code DRY.
