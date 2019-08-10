@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The Document Object Model(DOM) is a cross-platform and language-independent interface. Meaning it can "understand" multiple languages. We can see the DOM in our browser when we use Dev Tools.
+
 2. What is an event?
+
+Events are "things" that happen to HTML elements. They are triggered by something that the client does. Examples: click, arrow-down, scroll, etc.
 
 3. What is an event listener?
 
+The addEventListener() method attaches an event to an action that the client triggers. It is "listening" or "waiting" for the client to trigger an event.
+
 4. Why would we convert a NodeList into an Array?
 
+Because if you need to go over each item it's easier to do that with .forEach, .map etc. You can't do that with a NodeList because it is techinally an object.
+
 5. What is a component?
+
+Resusable code that keeps your code DRY.
 
 ### Git Set up
 
